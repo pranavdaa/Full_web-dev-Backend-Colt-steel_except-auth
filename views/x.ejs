@@ -1,0 +1,14 @@
+<h1>This is a detailed blog of all the dtuff present</h1>
+<% include partials/header.ejs %>
+<h1>This is a detailed blog of all the dtuff present</h1>
+
+  <h3><%= blog.title %></h3>
+  <img src="<%=blog.image%>" alt="">
+<h5><%= blog.created%></h5>
+<p>These are the detailes go it!!</p>
+<a href="/blog/<%= blog._id%>/update" class="btn btn-danger">Edit</a>
+<form action="/blog/<%= blog._id %>?_method=DELETE" method="post">
+  <button >Delete</button>
+</form>
+
+<% include partials/footer.ejs %>

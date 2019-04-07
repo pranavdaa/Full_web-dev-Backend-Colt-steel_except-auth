@@ -1,0 +1,16 @@
+<% include partials/header.ejs %>
+<div class="jumbotron">
+  <h1>Political Bloggers</h1>
+  <p>Indian political movements and discussion on various topics is done here.</p>
+  <div class="container">
+    <button type="button" class="btn btn-primary" href="/blog">Create a Blog</button>
+  </div>
+</div>
+<% blog.forEach(function(blog){ %>
+  <h3><%= blog.title %></h3>
+  <img src="<%=blog.image%>" alt="">
+<h5><%= blog.created%></h5>
+<a href="/blog/<%= blog._id%>" class="btn btn-primary">Details</a>
+<% }) %>
+
+<% include partials/footer.ejs %>
